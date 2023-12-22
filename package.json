@@ -1,31 +1,32 @@
 {
-  "author": "Jared Dellitt @jareddellitt",
+  "author": "Brale Developers <support@brale.xyz> (https://docs.brale.xyz)",
   "bin": {
     "brale": "./bin/run.js"
   },
   "dependencies": {
     "@oclif/core": "3.15.0",
-    "@oclif/plugin-help": "6.0.8",
-    "@oclif/plugin-plugins": "^4",
-    "axios": "^1.6.2",
-    "openapi-client-axios": "^7.4.0"
+    "@oclif/plugin-help": "6.0.9",
+    "@oclif/plugin-plugins": "4.1.10",
+    "@oclif/plugin-update": "4.1.5"
   },
   "description": "Brale API CLI",
   "devDependencies": {
-    "@oclif/prettier-config": "^0.2.1",
-    "@oclif/test": "^3",
-    "@types/chai": "^4",
+    "@oclif/prettier-config": "0.2.1",
+    "@oclif/test": "3.1.5",
+    "@openapitools/openapi-generator-cli": "2.7.0",
+    "@types/chai": "4.3.11",
     "@types/mocha": "10.0.6",
-    "@types/node": "20.10.4",
-    "chai": "^4",
-    "eslint": "^8.55.0",
-    "eslint-config-oclif": "^5",
-    "eslint-config-oclif-typescript": "3.0.26",
+    "@types/node": "20.10.5",
+    "chai": "4.3.10",
+    "eslint": "8.56.0",
+    "eslint-config-oclif": "5.0.0",
+    "eslint-config-oclif-typescript": "3.0.29",
     "eslint-config-prettier": "9.1.0",
-    "mocha": "^10",
+    "mocha": "10.2.0",
+    "nyc": "15.1.0",
     "oclif": "4.1.0",
     "shx": "0.3.4",
-    "ts-node": "^10.9.2",
+    "ts-node": "10.9.2",
     "typescript": "5.3.3"
   },
   "engines": {
@@ -36,7 +37,7 @@
     "/dist",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/Brale-xyz/brale-cli",
+  "homepage": "https://github.com/Brale-xyz/cli",
   "license": "MIT",
   "main": "dist/index.js",
   "name": "brale",
@@ -46,16 +47,12 @@
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-plugins",
+      "@oclif/plugin-update"
     ],
-    "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
+    "topicSeparator": " "
   },
-  "repository": "Brale-xyz/brale-cli",
+  "repository": "Brale-xyz/cli",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts",
@@ -64,10 +61,12 @@
     "prepack": "yarn build && oclif manifest && oclif readme",
     "prepare": "yarn build",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "coverage": "nyc yarn test",
+    "version": "oclif readme && git add README.md",
+    "gen:api": "curl https://api.brale.xyz/openapi > openapi.json && openapi-generator-cli generate -i openapi.json -g typescript-fetch -o src/gen/api && ./scripts/ignore-gen.sh"
   },
   "version": "0.0.0",
-  "bugs": "https://github.com/Brale-xyz/brale-cli/issues",
+  "bugs": "https://github.com/Brale-xyz/cli/issues",
   "keywords": [
     "oclif"
   ],

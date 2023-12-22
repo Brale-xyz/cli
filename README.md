@@ -3,52 +3,52 @@
 CLI for use against Brale's API.
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [Brale CLI](#brale-cli)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g brale
 $ brale COMMAND
 running command...
 $ brale (--version)
-brale/0.0.0 darwin-arm64 node-v20.5.0
+brale/0.0.0 darwin-arm64 node-v20.10.0
 $ brale --help [COMMAND]
 USAGE
   $ brale COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`brale addresses`](#brale-addresses)
-- [`brale base`](#brale-base)
-- [`brale financial-institutions`](#brale-financial-institutions)
-- [`brale help [COMMANDS]`](#brale-help-commands)
-- [`brale orders get ID`](#brale-orders-get-id)
-- [`brale plugins`](#brale-plugins)
-- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
-- [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
-- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin-1)
-- [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
-- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
-- [`brale plugins reset`](#brale-plugins-reset)
-- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-1)
-- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-2)
-- [`brale plugins update`](#brale-plugins-update)
-- [`brale tokens`](#brale-tokens)
-- [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
-- [`brale tokens mint TICKER`](#brale-tokens-mint-ticker)
-- [`brale tokens redeem TICKER`](#brale-tokens-redeem-ticker)
+* [`brale addresses`](#brale-addresses)
+* [`brale base`](#brale-base)
+* [`brale configure`](#brale-configure)
+* [`brale financial-institutions`](#brale-financial-institutions)
+* [`brale help [COMMANDS]`](#brale-help-commands)
+* [`brale mint TICKER`](#brale-mint-ticker)
+* [`brale orders get ID`](#brale-orders-get-id)
+* [`brale orders transactions ID`](#brale-orders-transactions-id)
+* [`brale plugins`](#brale-plugins)
+* [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
+* [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
+* [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin-1)
+* [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
+* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
+* [`brale plugins reset`](#brale-plugins-reset)
+* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-1)
+* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-2)
+* [`brale plugins update`](#brale-plugins-update)
+* [`brale redeem TICKER`](#brale-redeem-ticker)
+* [`brale tokens`](#brale-tokens)
+* [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
+* [`brale update [CHANNEL]`](#brale-update-channel)
 
 ## `brale addresses`
 
@@ -69,7 +69,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/addresses/index.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/addresses/index.ts)_
+_See code: [src/commands/addresses/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/addresses/index.ts)_
 
 ## `brale base`
 
@@ -84,7 +84,31 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/base.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/base.ts)_
+_See code: [src/commands/base.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/base.ts)_
+
+## `brale configure`
+
+Configure API credentials
+
+```
+USAGE
+  $ brale configure -i <value> -s <value> [--json] [-r] [-h <value>] [-a <value>]
+
+FLAGS
+  -a, --auth-host=<value>      Token Auth Host
+  -h, --api-host=<value>       API Host
+  -i, --client-id=<value>      (required) API Client ID
+  -r, --raw                    Output raw JSON (defaults to a table)
+  -s, --client-secret=<value>  (required) API Client Secret
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  Configure API credentials
+```
+
+_See code: [src/commands/configure/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/configure/index.ts)_
 
 ## `brale financial-institutions`
 
@@ -104,7 +128,7 @@ DESCRIPTION
   List financial institutions
 ```
 
-_See code: [src/commands/financial-institutions/index.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/financial-institutions/index.ts)_
+_See code: [src/commands/financial-institutions/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/financial-institutions/index.ts)_
 
 ## `brale help [COMMANDS]`
 
@@ -124,7 +148,37 @@ DESCRIPTION
   Display help for brale.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.8/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.9/src/commands/help.ts)_
+
+## `brale mint TICKER`
+
+Mint tokens
+
+```
+USAGE
+  $ brale mint TICKER -a <value> -c <value> -d <value> [--json] [-r] [-n <value>] [-q <value> -p USDC|wire]
+
+ARGUMENTS
+  TICKER  The ticker of the token to mint
+
+FLAGS
+  -a, --amount=<value>         (required) The amount to mint
+  -c, --chain=<value>          (required) The chain ID of the deployment/chain to mint on
+  -d, --destination=<value>    (required) The destination address ID
+  -n, --note=<value>           A note to add to the order
+  -p, --payment=<option>       [default: wire] Payment
+                               <options: USDC|wire>
+  -q, --payment-chain=<value>  The USDC chain to pay from
+  -r, --raw                    Output raw JSON (defaults to a table)
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  Mint tokens
+```
+
+_See code: [src/commands/mint/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/mint/index.ts)_
 
 ## `brale orders get ID`
 
@@ -147,7 +201,30 @@ DESCRIPTION
   Get order
 ```
 
-_See code: [src/commands/orders/get.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/orders/get.ts)_
+_See code: [src/commands/orders/get.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/orders/get.ts)_
+
+## `brale orders transactions ID`
+
+Get an order's transactions
+
+```
+USAGE
+  $ brale orders transactions ID [--json] [-r]
+
+ARGUMENTS
+  ID  The id of the Order
+
+FLAGS
+  -r, --raw  Output raw JSON (defaults to a table)
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  Get an order's transactions
+```
+
+_See code: [src/commands/orders/transactions.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/orders/transactions.ts)_
 
 ## `brale plugins`
 
@@ -207,7 +284,7 @@ ALIASES
   $ brale plugins add
 
 EXAMPLES
-  $ brale plugins add myplugin
+  $ brale plugins add myplugin 
 
   $ brale plugins add https://github.com/someuser/someplugin
 
@@ -276,7 +353,7 @@ ALIASES
   $ brale plugins add
 
 EXAMPLES
-  $ brale plugins install myplugin
+  $ brale plugins install myplugin 
 
   $ brale plugins install https://github.com/someuser/someplugin
 
@@ -424,6 +501,38 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/update.ts)_
 
+## `brale redeem TICKER`
+
+Redeem/burn tokens
+
+```
+USAGE
+  $ brale redeem TICKER -a <value> -c <value> [--json] [-r] [-d <value> -p USDC|wire] [-f <value> ] [-n
+    <value>] [-q <value> ]
+
+ARGUMENTS
+  TICKER  The ticker of the token to redeem/burn
+
+FLAGS
+  -a, --amount=<value>                 (required) The amount to redeem
+  -c, --chain=<value>                  (required) The chain ID of the deployment/chain to redeem from
+  -d, --address=<value>                The ID of the address you want to receive the USDC (if applicable)
+  -f, --financial-institution=<value>  The destination financial institution ID
+  -n, --note=<value>                   A note to add to the order
+  -p, --payment=<option>               Payment
+                                       <options: USDC|wire>
+  -q, --payment-chain=<value>          The USDC chain to pay to
+  -r, --raw                            Output raw JSON (defaults to a table)
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  Redeem/burn tokens
+```
+
+_See code: [src/commands/redeem/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/redeem/index.ts)_
+
 ## `brale tokens`
 
 List addresses
@@ -443,7 +552,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/tokens/index.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/tokens/index.ts)_
+_See code: [src/commands/tokens/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/tokens/index.ts)_
 
 ## `brale tokens deployments TICKER`
 
@@ -467,63 +576,42 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/tokens/deployments.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/tokens/deployments.ts)_
+_See code: [src/commands/tokens/deployments.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/tokens/deployments.ts)_
 
-## `brale tokens mint TICKER`
+## `brale update [CHANNEL]`
 
-Mint tokens
-
-```
-USAGE
-  $ brale tokens mint TICKER -a <value> -c <value> -d <value> [--json] [-r] [-n <value>] [-q <value> -p USDC|wire]
-
-ARGUMENTS
-  TICKER  The ticker of the token to mint
-
-FLAGS
-  -a, --amount=<value>         (required) The amount to mint
-  -c, --chain=<value>          (required) The chain ID of the deployment/chain to mint on
-  -d, --destination=<value>    (required) The destination address ID
-  -n, --note=<value>           A note to add to the order
-  -p, --payment=<option>       [default: wire] Payment
-                               <options: USDC|wire>
-  -q, --payment-chain=<value>  The USDC chain to pay from
-  -r, --raw                    Output raw JSON (defaults to a table)
-
-GLOBAL FLAGS
-  --json  Format output as json.
-
-DESCRIPTION
-  Mint tokens
-```
-
-_See code: [src/commands/tokens/mint.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/tokens/mint.ts)_
-
-## `brale tokens redeem TICKER`
-
-Mint tokens
+update the brale CLI
 
 ```
 USAGE
-  $ brale tokens redeem TICKER -a <value> -c <value> -d <value> [--json] [-r] [-n <value>]
-
-ARGUMENTS
-  TICKER  The ticker of the token to mint
+  $ brale update [CHANNEL] [-a] [--force] [-i | -v <value>]
 
 FLAGS
-  -a, --amount=<value>       (required) The amount to mint
-  -c, --chain=<value>        (required) The chain ID of the deployment/chain to mint on
-  -d, --destination=<value>  (required) The destination address ID
-  -n, --note=<value>         A note to add to the order
-  -r, --raw                  Output raw JSON (defaults to a table)
-
-GLOBAL FLAGS
-  --json  Format output as json.
+  -a, --available        See available versions.
+  -i, --interactive      Interactively select version to install. This is ignored if a channel is provided.
+  -v, --version=<value>  Install a specific version.
+      --force            Force a re-download of the requested version.
 
 DESCRIPTION
-  Mint tokens
+  update the brale CLI
+
+EXAMPLES
+  Update to the stable channel:
+
+    $ brale update stable
+
+  Update to a specific version:
+
+    $ brale update --version 1.0.0
+
+  Interactively select version:
+
+    $ brale update --interactive
+
+  See available versions:
+
+    $ brale update --available
 ```
 
-_See code: [src/commands/tokens/redeem.ts](https://github.com/Brale-xyz/brale-cli/blob/v0.0.0/src/commands/tokens/redeem.ts)_
-
+_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v4.1.5/src/commands/update.ts)_
 <!-- commandsstop -->

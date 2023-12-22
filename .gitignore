@@ -2,11 +2,15 @@
 *-debug.log
 *-error.log
 /.idea
+/.vscode
 /.nyc_output
+/coverage
 /dist
 /lib
+/src/gen
 /package-lock.json
 /tmp
+openapi.json
 node_modules
 oclif.lock
 oclif.manifest.json
