@@ -12,7 +12,7 @@
   "description": "Brale API CLI",
   "devDependencies": {
     "@oclif/prettier-config": "0.2.1",
-    "@oclif/test": "3.1.5",
+    "@oclif/test": "3.1.7",
     "@openapitools/openapi-generator-cli": "2.7.0",
     "@types/chai": "4.3.11",
     "@types/mocha": "10.0.6",
