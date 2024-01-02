@@ -12,11 +12,11 @@ CLI for use against Brale's API.
 
 <!-- usage -->
 ```sh-session
-$ npm install -g brale
+$ npm install -g @brale-xyz/cli
 $ brale COMMAND
 running command...
 $ brale (--version)
-brale/0.0.0 darwin-arm64 node-v20.10.0
+@brale-xyz/cli/0.0.2 darwin-arm64 node-v20.10.0
 $ brale --help [COMMAND]
 USAGE
   $ brale COMMAND
@@ -69,7 +69,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/addresses/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/addresses/index.ts)_
+_See code: [src/commands/addresses/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/addresses/index.ts)_
 
 ## `brale base`
 
@@ -84,7 +84,7 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/base.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/base.ts)_
+_See code: [src/commands/base.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/base.ts)_
 
 ## `brale configure`
 
@@ -108,7 +108,7 @@ DESCRIPTION
   Configure API credentials
 ```
 
-_See code: [src/commands/configure/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/configure/index.ts)_
+_See code: [src/commands/configure/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/configure/index.ts)_
 
 ## `brale financial-institutions`
 
@@ -128,7 +128,7 @@ DESCRIPTION
   List financial institutions
 ```
 
-_See code: [src/commands/financial-institutions/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/financial-institutions/index.ts)_
+_See code: [src/commands/financial-institutions/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/financial-institutions/index.ts)_
 
 ## `brale help [COMMANDS]`
 
@@ -178,7 +178,7 @@ DESCRIPTION
   Mint tokens
 ```
 
-_See code: [src/commands/mint/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/mint/index.ts)_
+_See code: [src/commands/mint/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/mint/index.ts)_
 
 ## `brale orders get ID`
 
@@ -201,7 +201,7 @@ DESCRIPTION
   Get order
 ```
 
-_See code: [src/commands/orders/get.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/orders/get.ts)_
+_See code: [src/commands/orders/get.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/orders/get.ts)_
 
 ## `brale orders transactions ID`
 
@@ -224,7 +224,7 @@ DESCRIPTION
   Get an order's transactions
 ```
 
-_See code: [src/commands/orders/transactions.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/orders/transactions.ts)_
+_See code: [src/commands/orders/transactions.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/orders/transactions.ts)_
 
 ## `brale plugins`
 
@@ -531,7 +531,7 @@ DESCRIPTION
   Redeem/burn tokens
 ```
 
-_See code: [src/commands/redeem/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/redeem/index.ts)_
+_See code: [src/commands/redeem/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/redeem/index.ts)_
 
 ## `brale tokens`
 
@@ -552,7 +552,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/tokens/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/tokens/index.ts)_
+_See code: [src/commands/tokens/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/tokens/index.ts)_
 
 ## `brale tokens deployments TICKER`
 
@@ -576,7 +576,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/tokens/deployments.ts](https://github.com/Brale-xyz/cli/blob/v0.0.0/src/commands/tokens/deployments.ts)_
+_See code: [src/commands/tokens/deployments.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/tokens/deployments.ts)_
 
 ## `brale update [CHANNEL]`
 
