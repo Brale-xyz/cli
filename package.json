@@ -1,7 +1,7 @@
 {
   "author": "Brale Developers <support@brale.xyz> (https://docs.brale.xyz)",
   "bin": {
-    "brale": "./bin/run.js"
+    "brale": "bin/run.js"
   },
   "dependencies": {
     "@oclif/core": "3.15.0",
@@ -40,7 +40,7 @@
   "homepage": "https://github.com/Brale-xyz/cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "name": "brale",
+  "name": "@brale-xyz/cli",
   "oclif": {
     "bin": "brale",
     "dirname": "brale",
@@ -52,9 +52,15 @@
     ],
     "topicSeparator": " "
   },
-  "repository": "Brale-xyz/cli",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brale-xyz/cli.git"
+  },
   "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
+    "build": "shx rm -rf dist && yarn gen:api && tsc -b",
     "lint": "eslint . --ext .ts",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
@@ -65,10 +71,15 @@
     "version": "oclif readme && git add README.md",
     "gen:api": "curl https://api.brale.xyz/openapi > openapi.json && openapi-generator-cli generate -i openapi.json -g typescript-fetch -o src/gen/api && ./scripts/ignore-gen.sh"
   },
-  "version": "0.0.0",
-  "bugs": "https://github.com/Brale-xyz/cli/issues",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/Brale-xyz/cli/issues"
+  },
   "keywords": [
     "oclif"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  }
 }
