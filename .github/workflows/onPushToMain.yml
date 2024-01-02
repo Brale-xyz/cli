@@ -7,6 +7,9 @@ on:
 
 jobs:
   release:
+    permissions:
+      actions: write
+      contents: write
     # https://github.com/salesforcecli/github-workflows/blob/main/.github/workflows/create-github-release.yml
     uses: salesforcecli/github-workflows/.github/workflows/create-github-release.yml@main
     secrets:
