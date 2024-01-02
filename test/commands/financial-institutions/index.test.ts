@@ -2,10 +2,11 @@ import {expect, test} from '@oclif/test'
 
 import * as api from '../../../src/api'
 import {FinancialInstitutionData} from '../../../src/gen/api'
+import {preConfigure} from '../../fixtures/config'
 import {FinancialInstitutionsApiStub, fis} from '../../fixtures/financial-institutions-api'
 
 describe('financial-institutions', () => {
-  test
+  preConfigure(test)
     .stub(api, 'financialInstitutionsAPI', (stub) => stub.returns(new FinancialInstitutionsApiStub()))
     .stdout()
     .command(['financial-institutions'])

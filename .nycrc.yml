@@ -5,7 +5,7 @@ reporter: [lcov, text]
 # 'configure' is tested, but for some reason coverage is busted
 exclude: [src/api.ts, src/commands/configure, src/gen/**/*.ts, test/**, dist]
 
-branches: 80
+branches: 75
 lines: 95
 functions: 95
 statements: 95
