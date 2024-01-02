@@ -2,13 +2,14 @@ import {expect, test} from '@oclif/test'
 
 import * as api from '../../../src/api'
 import {OrderData} from '../../../src/gen/api'
+import {preConfigure} from '../../fixtures/config'
 import {RedemptionsApiStub, redeemOrder} from '../../fixtures/redemptions-api'
 import {TokensApiStub, deployments} from '../../fixtures/tokens-api'
 
 describe('redeem', () => {
   const redemptions = new RedemptionsApiStub()
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stub(api, 'redemptionsAPI', (stub) => stub.returns(redemptions))
     .stdout()
@@ -27,7 +28,7 @@ describe('redeem', () => {
     .catch((error) => expect(error.message).to.equal(`Couldn't find token for ticker: TOCK`))
     .it('returns an error if token not found for ticker')
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stub(api, 'redemptionsAPI', (stub) => stub.returns(redemptions))
     .stdout()
@@ -46,7 +47,7 @@ describe('redeem', () => {
     .catch((error) => expect(error.message).to.equal(`Couldn't find a deployment for chain: stellar`))
     .it('returns an error if deployment not found for given chain')
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stub(api, 'redemptionsAPI', (stub) => stub.returns(redemptions))
     .stdout()
@@ -82,7 +83,7 @@ describe('redeem', () => {
       }
     })
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stub(api, 'redemptionsAPI', (stub) => stub.returns(redemptions))
     .stdout()
@@ -124,7 +125,7 @@ describe('redeem', () => {
       }
     })
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stub(api, 'redemptionsAPI', (stub) => stub.returns(redemptions))
     .stdout()

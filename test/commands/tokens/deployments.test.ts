@@ -3,10 +3,11 @@ import {expect, test} from '@oclif/test'
 
 import * as api from '../../../src/api'
 import {DeploymentData, DeploymentDataFromJSON} from '../../../src/gen/api'
+import {preConfigure} from '../../fixtures/config'
 import {TokensApiStub, deployments} from '../../fixtures/tokens-api'
 
 describe('tokens deployments', () => {
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stdout()
     .command(['tokens deployments', 'TICK1'])
@@ -14,14 +15,14 @@ describe('tokens deployments', () => {
       deployments.map((d) => DeploymentDataFromJSON(d)).map((a) => assertDeploymentDataInOutput(ctx.stdout, a))
     })
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stdout()
     .command(['tokens deployments', 'TOCK'])
     .catch((error) => expect(error.message).to.equal(`Couldn't find token for ticker: TOCK`))
     .it('returns an error if token not found for ticker')
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stdout()
     .command(['tokens deployments', 'TICK1', '-c', 'solana'])

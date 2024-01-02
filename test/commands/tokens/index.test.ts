@@ -3,10 +3,11 @@ import {expect, test} from '@oclif/test'
 
 import * as api from '../../../src/api'
 import {TokenData, TokenDataFromJSON} from '../../../src/gen/api'
+import {preConfigure} from '../../fixtures/config'
 import {TokensApiStub, tokens} from '../../fixtures/tokens-api'
 
 describe('tokens', () => {
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stdout()
     .command(['tokens'])
@@ -14,7 +15,7 @@ describe('tokens', () => {
       tokens.map((d) => TokenDataFromJSON(d)).map((a) => assertTokenDataInOutput(ctx.stdout, a))
     })
 
-  test
+  preConfigure(test)
     .stub(api, 'tokensAPI', (stub) => stub.returns(new TokensApiStub()))
     .stdout()
     .command(['tokens', '-t', 'TICK2'])

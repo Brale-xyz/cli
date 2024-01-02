@@ -3,9 +3,10 @@ import {expect, test} from '@oclif/test'
 import * as api from '../../../src/api'
 import {AddressData} from '../../../src/gen/api'
 import {AddressesApiStub, addresses} from '../../fixtures/addresses-api'
+import {preConfigure} from '../../fixtures/config'
 
 describe('addresses', () => {
-  test
+  preConfigure(test)
     .stub(api, 'addressesAPI', (stub) => stub.returns(new AddressesApiStub()))
     .stdout()
     .command(['addresses'])
@@ -13,7 +14,7 @@ describe('addresses', () => {
       addresses.map((a) => assertAddressDataInOutput(ctx.stdout, a))
     })
 
-  test
+  preConfigure(test)
     .stub(api, 'addressesAPI', (stub) => stub.returns(new AddressesApiStub()))
     .stdout()
     .command(['addresses', '-t', 'custodial'])
@@ -24,7 +25,7 @@ describe('addresses', () => {
       expect(ctx.stdout).to.not.contain(eoa?.id)
     })
 
-  test
+  preConfigure(test)
     .stub(api, 'addressesAPI', (stub) => stub.returns(new AddressesApiStub()))
     .stdout()
     .command(['addresses', '-t', 'externally-owned'])
