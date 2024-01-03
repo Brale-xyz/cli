@@ -1,54 +1,58 @@
 # Brale CLI
 
-CLI for use against Brale's API.
+[![Version](https://img.shields.io/npm/v/@Brale-xyz/cli.svg)](https://www.npmjs.com/package/@brale/cli)
+[![License](https://img.shields.io/npm/l/@Brale-xyz/cli.svg)](https://github.com/Brale-xyz/cli/blob/master/LICENSE)
+
+The Brale CLI is a command-line interface designed to simplify and streamline common API interactions with the [Brale API](https://docs.brale.xyz/reference). Brale provides a range of services related to on-chain asset issuance and management, and this CLI offers a convenient way to access those features directly from the command line.
+
+Under the hood, the CLI uses [oclif](https://oclif.io/) for the UX and generates Brale API definitions using the [openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli) based on our [OpenAPI file](https://api.brale.xyz/openapi).
 
 <!-- toc -->
-* [Brale CLI](#brale-cli)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Brale CLI](#brale-cli)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
-<!-- usage -->
+To get started, you'll need to have an [API application](https://docs.brale.xyz/reference/authentication) created and access to the client ID and client secret. After installing, you'll need to configure the CLI with your API credentials:
+
 ```sh-session
 $ npm install -g @brale-xyz/cli
-$ brale COMMAND
-running command...
-$ brale (--version)
-@brale-xyz/cli/0.0.2 darwin-arm64 node-v20.10.0
+$ brale configure --client-id $CLIENT_ID --client-secret $CLIENT_SECRET
 $ brale --help [COMMAND]
 USAGE
   $ brale COMMAND
 ...
 ```
-<!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`brale addresses`](#brale-addresses)
-* [`brale base`](#brale-base)
-* [`brale configure`](#brale-configure)
-* [`brale financial-institutions`](#brale-financial-institutions)
-* [`brale help [COMMANDS]`](#brale-help-commands)
-* [`brale mint TICKER`](#brale-mint-ticker)
-* [`brale orders get ID`](#brale-orders-get-id)
-* [`brale orders transactions ID`](#brale-orders-transactions-id)
-* [`brale plugins`](#brale-plugins)
-* [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
-* [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
-* [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin-1)
-* [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
-* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
-* [`brale plugins reset`](#brale-plugins-reset)
-* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-1)
-* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-2)
-* [`brale plugins update`](#brale-plugins-update)
-* [`brale redeem TICKER`](#brale-redeem-ticker)
-* [`brale tokens`](#brale-tokens)
-* [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
-* [`brale update [CHANNEL]`](#brale-update-channel)
+
+- [`brale addresses`](#brale-addresses)
+- [`brale base`](#brale-base)
+- [`brale configure`](#brale-configure)
+- [`brale financial-institutions`](#brale-financial-institutions)
+- [`brale help [COMMANDS]`](#brale-help-commands)
+- [`brale mint TICKER`](#brale-mint-ticker)
+- [`brale orders get ID`](#brale-orders-get-id)
+- [`brale orders transactions ID`](#brale-orders-transactions-id)
+- [`brale plugins`](#brale-plugins)
+- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
+- [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
+- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin-1)
+- [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
+- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
+- [`brale plugins reset`](#brale-plugins-reset)
+- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-1)
+- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-2)
+- [`brale plugins update`](#brale-plugins-update)
+- [`brale redeem TICKER`](#brale-redeem-ticker)
+- [`brale tokens`](#brale-tokens)
+- [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
+- [`brale update [CHANNEL]`](#brale-update-channel)
 
 ## `brale addresses`
 
@@ -284,7 +288,7 @@ ALIASES
   $ brale plugins add
 
 EXAMPLES
-  $ brale plugins add myplugin 
+  $ brale plugins add myplugin
 
   $ brale plugins add https://github.com/someuser/someplugin
 
@@ -353,7 +357,7 @@ ALIASES
   $ brale plugins add
 
 EXAMPLES
-  $ brale plugins install myplugin 
+  $ brale plugins install myplugin
 
   $ brale plugins install https://github.com/someuser/someplugin
 
@@ -614,4 +618,5 @@ EXAMPLES
 ```
 
 _See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v4.1.5/src/commands/update.ts)_
+
 <!-- commandsstop -->
