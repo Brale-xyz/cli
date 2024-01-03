@@ -1,7 +1,7 @@
 # Brale CLI
 
-[![Version](https://img.shields.io/npm/v/@Brale-xyz/cli.svg)](https://www.npmjs.com/package/@brale/cli)
-[![License](https://img.shields.io/npm/l/@Brale-xyz/cli.svg)](https://github.com/Brale-xyz/cli/blob/master/LICENSE)
+![npm (scoped)](https://img.shields.io/npm/v/%40brale/cli?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/Brale-xyz/cli?style=for-the-badge)
 
 The Brale CLI is a command-line interface designed to simplify and streamline common API interactions with the [Brale API](https://docs.brale.xyz/reference). Brale provides a range of services related to on-chain asset issuance and management, and this CLI offers a convenient way to access those features directly from the command line.
 
@@ -18,7 +18,7 @@ Under the hood, the CLI uses [oclif](https://oclif.io/) for the UX and generates
 To get started, you'll need to have an [API application](https://docs.brale.xyz/reference/authentication) created and access to the client ID and client secret. After installing, you'll need to configure the CLI with your API credentials:
 
 ```sh-session
-$ npm install -g @brale-xyz/cli
+$ npm install -g @brale/cli
 $ brale configure --client-id $CLIENT_ID --client-secret $CLIENT_SECRET
 $ brale --help [COMMAND]
 USAGE
