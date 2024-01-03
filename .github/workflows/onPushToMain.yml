@@ -13,7 +13,7 @@ jobs:
     # https://github.com/salesforcecli/github-workflows/blob/main/.github/workflows/create-github-release.yml
     uses: salesforcecli/github-workflows/.github/workflows/create-github-release.yml@main
     secrets:
-      SVC_CLI_BOT_GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      SVC_CLI_BOT_GITHUB_TOKEN: ${{secrets.BRALE_BOT_CLI_PAT}}
 
   # most repos won't use this
   # depends on previous job to avoid git collisions, not for any functionality reason
