@@ -1,0 +1,11 @@
+{
+  "check-coverage": true,
+  "extension": ".ts",
+  "forbid-only": "test/**/*.test.ts",
+  "reporter": ["lcov", "text"],
+  "exclude": ["src/api.ts", "src/commands/configure", "src/gen/**/*.ts", "test/**", "dist"],
+  "branches": 75,
+  "lines": 95,
+  "functions": 95,
+  "statements": 95
+}
