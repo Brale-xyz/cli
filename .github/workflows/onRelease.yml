@@ -10,6 +10,7 @@ on:
         description: tag that needs to publish
         type: string
         required: true
+
 jobs:
   npm:
     uses: salesforcecli/github-workflows/.github/workflows/npmPublish.yml@main
