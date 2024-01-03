@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Brale-xyz/cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "name": "@brale-xyz/cli",
+  "name": "@brale/cli",
   "oclif": {
     "bin": "brale",
     "dirname": "brale",
@@ -52,9 +52,6 @@
       "@oclif/plugin-update"
     ],
     "topicSeparator": " "
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
