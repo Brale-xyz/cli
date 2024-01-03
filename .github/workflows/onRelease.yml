@@ -19,6 +19,7 @@ jobs:
         with:
           ref: ${{ github.event.release.tag_name || inputs.tag }}
       - uses: actions/setup-node@v4
+      - run: yarn
       - run: yarn build
       - run: npm publish
         env:
