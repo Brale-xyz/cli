@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Brale-xyz/cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "name": "@brale/cli",
+  "name": "@brale-xyz/cli",
   "oclif": {
     "bin": "brale",
     "dirname": "brale",
