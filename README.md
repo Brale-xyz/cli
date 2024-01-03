@@ -1,8 +1,8 @@
 # Brale CLI
 
-![npm (scoped)](https://img.shields.io/npm/v/%40brale/cli?style=for-the-badge)
-![GitHub License](https://img.shields.io/github/license/Brale-xyz/cli?style=for-the-badge)
-![nycrc config on GitHub](https://img.shields.io/nycrc/Brale-xyz/cli?config=.nycrc.json&preferredThreshold=lines&style=for-the-badge)
+![npm (scoped)](https://img.shields.io/npm/v/%40brale/cli?style=flat-square&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40brale%2Fcli)
+![GitHub License](https://img.shields.io/github/license/Brale-xyz/cli?style=flat-square&link=https%3A%2F%2Fgithub.com%2FBrale-xyz%2Fcli%2Fblob%2Fmain%2FLICENSE)
+![nycrc config on GitHub](https://img.shields.io/nycrc/Brale-xyz/cli?config=.nycrc.json&preferredThreshold=lines&style=flat-square&link=https%3A%2F%2Fgithub.com%2FBrale-xyz%2Fcli)
 
 The Brale CLI is a command-line interface designed to simplify and streamline common API interactions with the [Brale API](https://docs.brale.xyz/reference). Brale provides a range of services related to on-chain asset issuance and management, and this CLI offers a convenient way to access those features directly from the command line.
 
