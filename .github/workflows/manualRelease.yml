@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN  }}
+          token: ${{ secrets.BRALE_BOT_CLI_PAT  }}
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@d360fad3a42feca6462f72c97c165d60a02d4bf2
@@ -20,7 +20,7 @@ jobs:
         with:
           git-user-name: svc-cli-bot
           git-user-email: dev@brale.xyz
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.BRALE_BOT_CLI_PAT }}
           output-file: false
           # always do the release, even if there are no semantic commits
           skip-on-empty: false
@@ -33,7 +33,7 @@ jobs:
       - name: Create Github Release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BRALE_BOT_CLI_PAT }}
         with:
           tag_name: ${{ steps.packageVersion.outputs.prop }}
           release_name: ${{ steps.packageVersion.outputs.prop }}
