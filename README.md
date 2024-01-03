@@ -8,10 +8,9 @@ The Brale CLI is a command-line interface designed to simplify and streamline co
 Under the hood, the CLI uses [oclif](https://oclif.io/) for the UX and generates Brale API definitions using the [openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli) based on our [OpenAPI file](https://api.brale.xyz/openapi).
 
 <!-- toc -->
-
-- [Brale CLI](#brale-cli)
-- [Usage](#usage)
-- [Commands](#commands)
+* [Brale CLI](#brale-cli)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
@@ -30,29 +29,25 @@ USAGE
 # Commands
 
 <!-- commands -->
-
-- [`brale addresses`](#brale-addresses)
-- [`brale base`](#brale-base)
-- [`brale configure`](#brale-configure)
-- [`brale financial-institutions`](#brale-financial-institutions)
-- [`brale help [COMMANDS]`](#brale-help-commands)
-- [`brale mint TICKER`](#brale-mint-ticker)
-- [`brale orders get ID`](#brale-orders-get-id)
-- [`brale orders transactions ID`](#brale-orders-transactions-id)
-- [`brale plugins`](#brale-plugins)
-- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
-- [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
-- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin-1)
-- [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
-- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
-- [`brale plugins reset`](#brale-plugins-reset)
-- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-1)
-- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin-2)
-- [`brale plugins update`](#brale-plugins-update)
-- [`brale redeem TICKER`](#brale-redeem-ticker)
-- [`brale tokens`](#brale-tokens)
-- [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
-- [`brale update [CHANNEL]`](#brale-update-channel)
+* [`brale addresses`](#brale-addresses)
+* [`brale base`](#brale-base)
+* [`brale configure`](#brale-configure)
+* [`brale financial-institutions`](#brale-financial-institutions)
+* [`brale help [COMMANDS]`](#brale-help-commands)
+* [`brale mint TICKER`](#brale-mint-ticker)
+* [`brale orders get ID`](#brale-orders-get-id)
+* [`brale orders transactions ID`](#brale-orders-transactions-id)
+* [`brale plugins`](#brale-plugins)
+* [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
+* [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
+* [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
+* [`brale plugins reset`](#brale-plugins-reset)
+* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
+* [`brale plugins update`](#brale-plugins-update)
+* [`brale redeem TICKER`](#brale-redeem-ticker)
+* [`brale tokens`](#brale-tokens)
+* [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
+* [`brale update [CHANNEL]`](#brale-update-channel)
 
 ## `brale addresses`
 
@@ -73,7 +68,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/addresses/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/addresses/index.ts)_
+_See code: [src/commands/addresses/index.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/addresses/index.ts)_
 
 ## `brale base`
 
@@ -88,7 +83,7 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/base.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/base.ts)_
+_See code: [src/commands/base.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/base.ts)_
 
 ## `brale configure`
 
@@ -112,7 +107,7 @@ DESCRIPTION
   Configure API credentials
 ```
 
-_See code: [src/commands/configure/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/configure/index.ts)_
+_See code: [src/commands/configure/index.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/configure/index.ts)_
 
 ## `brale financial-institutions`
 
@@ -132,7 +127,7 @@ DESCRIPTION
   List financial institutions
 ```
 
-_See code: [src/commands/financial-institutions/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/financial-institutions/index.ts)_
+_See code: [src/commands/financial-institutions/index.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/financial-institutions/index.ts)_
 
 ## `brale help [COMMANDS]`
 
@@ -152,7 +147,7 @@ DESCRIPTION
   Display help for brale.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.9/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/6.0.9/src/commands/help.ts)_
 
 ## `brale mint TICKER`
 
@@ -182,7 +177,7 @@ DESCRIPTION
   Mint tokens
 ```
 
-_See code: [src/commands/mint/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/mint/index.ts)_
+_See code: [src/commands/mint/index.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/mint/index.ts)_
 
 ## `brale orders get ID`
 
@@ -205,7 +200,7 @@ DESCRIPTION
   Get order
 ```
 
-_See code: [src/commands/orders/get.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/orders/get.ts)_
+_See code: [src/commands/orders/get.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/orders/get.ts)_
 
 ## `brale orders transactions ID`
 
@@ -228,7 +223,7 @@ DESCRIPTION
   Get an order's transactions
 ```
 
-_See code: [src/commands/orders/transactions.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/orders/transactions.ts)_
+_See code: [src/commands/orders/transactions.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/orders/transactions.ts)_
 
 ## `brale plugins`
 
@@ -251,49 +246,7 @@ EXAMPLES
   $ brale plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/index.ts)_
-
-## `brale plugins:install PLUGIN...`
-
-Installs a plugin into the CLI.
-
-```
-USAGE
-  $ brale plugins add plugins:install PLUGIN...
-
-ARGUMENTS
-  PLUGIN  Plugin to install.
-
-FLAGS
-  -f, --force    Run yarn install with force flag.
-  -h, --help     Show CLI help.
-  -s, --silent   Silences yarn output.
-  -v, --verbose  Show verbose yarn output.
-
-GLOBAL FLAGS
-  --json  Format output as json.
-
-DESCRIPTION
-  Installs a plugin into the CLI.
-  Can be installed from npm or a git url.
-
-  Installation of a user-installed plugin will override a core plugin.
-
-  e.g. If you have a core plugin that has a 'hello' command, installing a user-installed plugin with a 'hello' command
-  will override the core plugin implementation. This is useful if a user needs to update core plugin functionality in
-  the CLI without the need to patch and update the whole CLI.
-
-
-ALIASES
-  $ brale plugins add
-
-EXAMPLES
-  $ brale plugins add myplugin
-
-  $ brale plugins add https://github.com/someuser/someplugin
-
-  $ brale plugins add someuser/someplugin
-```
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/index.ts)_
 
 ## `brale plugins:inspect PLUGIN...`
 
@@ -320,7 +273,7 @@ EXAMPLES
   $ brale plugins inspect myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/inspect.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/inspect.ts)_
 
 ## `brale plugins:install PLUGIN...`
 
@@ -357,14 +310,14 @@ ALIASES
   $ brale plugins add
 
 EXAMPLES
-  $ brale plugins install myplugin
+  $ brale plugins install myplugin 
 
   $ brale plugins install https://github.com/someuser/someplugin
 
   $ brale plugins install someuser/someplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/install.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/install.ts)_
 
 ## `brale plugins:link PLUGIN`
 
@@ -394,33 +347,7 @@ EXAMPLES
   $ brale plugins link myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/link.ts)_
-
-## `brale plugins:uninstall PLUGIN...`
-
-Removes a plugin from the CLI.
-
-```
-USAGE
-  $ brale plugins remove plugins:uninstall PLUGIN...
-
-ARGUMENTS
-  PLUGIN  plugin to uninstall
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Removes a plugin from the CLI.
-
-ALIASES
-  $ brale plugins unlink
-  $ brale plugins remove
-
-EXAMPLES
-  $ brale plugins remove myplugin
-```
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/link.ts)_
 
 ## `brale plugins reset`
 
@@ -431,7 +358,7 @@ USAGE
   $ brale plugins reset
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/reset.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/reset.ts)_
 
 ## `brale plugins:uninstall PLUGIN...`
 
@@ -459,33 +386,7 @@ EXAMPLES
   $ brale plugins uninstall myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/uninstall.ts)_
-
-## `brale plugins:uninstall PLUGIN...`
-
-Removes a plugin from the CLI.
-
-```
-USAGE
-  $ brale plugins unlink plugins:uninstall PLUGIN...
-
-ARGUMENTS
-  PLUGIN  plugin to uninstall
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Removes a plugin from the CLI.
-
-ALIASES
-  $ brale plugins unlink
-  $ brale plugins remove
-
-EXAMPLES
-  $ brale plugins unlink myplugin
-```
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/uninstall.ts)_
 
 ## `brale plugins update`
 
@@ -503,7 +404,7 @@ DESCRIPTION
   Update installed plugins.
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.10/src/commands/plugins/update.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/4.1.10/src/commands/plugins/update.ts)_
 
 ## `brale redeem TICKER`
 
@@ -535,7 +436,7 @@ DESCRIPTION
   Redeem/burn tokens
 ```
 
-_See code: [src/commands/redeem/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/redeem/index.ts)_
+_See code: [src/commands/redeem/index.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/redeem/index.ts)_
 
 ## `brale tokens`
 
@@ -556,7 +457,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/tokens/index.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/tokens/index.ts)_
+_See code: [src/commands/tokens/index.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/tokens/index.ts)_
 
 ## `brale tokens deployments TICKER`
 
@@ -580,7 +481,7 @@ DESCRIPTION
   List addresses
 ```
 
-_See code: [src/commands/tokens/deployments.ts](https://github.com/Brale-xyz/cli/blob/v0.0.2/src/commands/tokens/deployments.ts)_
+_See code: [src/commands/tokens/deployments.ts](https://github.com/Brale-xyz/cli/blob/0.1.0/src/commands/tokens/deployments.ts)_
 
 ## `brale update [CHANNEL]`
 
@@ -617,6 +518,5 @@ EXAMPLES
     $ brale update --available
 ```
 
-_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v4.1.5/src/commands/update.ts)_
-
+_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/4.1.5/src/commands/update.ts)_
 <!-- commandsstop -->
