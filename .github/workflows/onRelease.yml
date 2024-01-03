@@ -14,10 +14,13 @@ on:
 jobs:
   npm:
     runs-on: ubuntu-latest
+    env:
+      NPM_PUBLISH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.release.tag_name || inputs.tag }}
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
       - uses: actions/setup-node@v4
       - run: yarn
       - run: yarn build
