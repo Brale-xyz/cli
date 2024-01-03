@@ -2,15 +2,17 @@
 
 ![npm (scoped)](https://img.shields.io/npm/v/%40brale/cli?style=for-the-badge)
 ![GitHub License](https://img.shields.io/github/license/Brale-xyz/cli?style=for-the-badge)
+![nycrc config on GitHub](https://img.shields.io/nycrc/Brale-xyz/cli?config=.nycrc.json&preferredThreshold=lines&style=for-the-badge)
 
 The Brale CLI is a command-line interface designed to simplify and streamline common API interactions with the [Brale API](https://docs.brale.xyz/reference). Brale provides a range of services related to on-chain asset issuance and management, and this CLI offers a convenient way to access those features directly from the command line.
 
 Under the hood, the CLI uses [oclif](https://oclif.io/) for the UX and generates Brale API definitions using the [openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli) based on our [OpenAPI file](https://api.brale.xyz/openapi).
 
 <!-- toc -->
-* [Brale CLI](#brale-cli)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Brale CLI](#brale-cli)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
@@ -29,25 +31,26 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`brale addresses`](#brale-addresses)
-* [`brale base`](#brale-base)
-* [`brale configure`](#brale-configure)
-* [`brale financial-institutions`](#brale-financial-institutions)
-* [`brale help [COMMANDS]`](#brale-help-commands)
-* [`brale mint TICKER`](#brale-mint-ticker)
-* [`brale orders get ID`](#brale-orders-get-id)
-* [`brale orders transactions ID`](#brale-orders-transactions-id)
-* [`brale plugins`](#brale-plugins)
-* [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
-* [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
-* [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
-* [`brale plugins reset`](#brale-plugins-reset)
-* [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
-* [`brale plugins update`](#brale-plugins-update)
-* [`brale redeem TICKER`](#brale-redeem-ticker)
-* [`brale tokens`](#brale-tokens)
-* [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
-* [`brale update [CHANNEL]`](#brale-update-channel)
+
+- [`brale addresses`](#brale-addresses)
+- [`brale base`](#brale-base)
+- [`brale configure`](#brale-configure)
+- [`brale financial-institutions`](#brale-financial-institutions)
+- [`brale help [COMMANDS]`](#brale-help-commands)
+- [`brale mint TICKER`](#brale-mint-ticker)
+- [`brale orders get ID`](#brale-orders-get-id)
+- [`brale orders transactions ID`](#brale-orders-transactions-id)
+- [`brale plugins`](#brale-plugins)
+- [`brale plugins:inspect PLUGIN...`](#brale-pluginsinspect-plugin)
+- [`brale plugins:install PLUGIN...`](#brale-pluginsinstall-plugin)
+- [`brale plugins:link PLUGIN`](#brale-pluginslink-plugin)
+- [`brale plugins reset`](#brale-plugins-reset)
+- [`brale plugins:uninstall PLUGIN...`](#brale-pluginsuninstall-plugin)
+- [`brale plugins update`](#brale-plugins-update)
+- [`brale redeem TICKER`](#brale-redeem-ticker)
+- [`brale tokens`](#brale-tokens)
+- [`brale tokens deployments TICKER`](#brale-tokens-deployments-ticker)
+- [`brale update [CHANNEL]`](#brale-update-channel)
 
 ## `brale addresses`
 
@@ -310,7 +313,7 @@ ALIASES
   $ brale plugins add
 
 EXAMPLES
-  $ brale plugins install myplugin 
+  $ brale plugins install myplugin
 
   $ brale plugins install https://github.com/someuser/someplugin
 
@@ -519,4 +522,5 @@ EXAMPLES
 ```
 
 _See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/4.1.5/src/commands/update.ts)_
+
 <!-- commandsstop -->
