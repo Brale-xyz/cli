@@ -12,20 +12,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.BRALE_BOT_CLI_PAT  }}
+          token: ${{ secrets.BRALE_BOT_CLI_PAT }}
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@d360fad3a42feca6462f72c97c165d60a02d4bf2
+        uses: TriPSs/conventional-changelog-action@v5.0.0
         # overriding some of the basic behaviors to just get the changelog
         with:
-          git-user-name: svc-cli-bot
+          git-user-name: brale-bot
           git-user-email: dev@brale.xyz
           github-token: ${{ secrets.BRALE_BOT_CLI_PAT }}
           output-file: false
           # always do the release, even if there are no semantic commits
           skip-on-empty: false
           tag-prefix: ''
-      - uses: notiz-dev/github-action-json-property@7a701887f4b568b23eb7b78bb0fc49aaeb1b68d3
+      - uses: notiz-dev/github-action-json-property@0.2.0
         id: packageVersion
         with:
           path: 'package.json'
