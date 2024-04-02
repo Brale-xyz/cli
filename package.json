@@ -72,7 +72,7 @@
     "version": "oclif readme && git add README.md",
     "gen:api": "curl https://api.brale.xyz/openapi > openapi.json && openapi-generator-cli generate -i openapi.json -g typescript-fetch -o src/gen/api && ./scripts/ignore-gen.sh"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bugs": {
     "url": "https://github.com/Brale-xyz/cli/issues"
   },
