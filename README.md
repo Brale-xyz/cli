@@ -4,7 +4,7 @@
 ![GitHub License](https://img.shields.io/github/license/Brale-xyz/cli?style=flat-square&link=https%3A%2F%2Fgithub.com%2FBrale-xyz%2Fcli%2Fblob%2Fmain%2FLICENSE)
 ![nycrc config on GitHub](https://img.shields.io/nycrc/Brale-xyz/cli?config=.nycrc.json&preferredThreshold=lines&style=flat-square&link=https%3A%2F%2Fgithub.com%2FBrale-xyz%2Fcli)
 
-The Brale CLI is a command-line interface designed to simplify and streamline common API interactions with the [Brale API](https://docs.brale.xyz/reference). Brale provides a range of services related to on-chain asset issuance and management, and this CLI offers a convenient way to access those features directly from the command line.
+The Brale CLI is a command-line interface designed to simplify and streamline common API interactions with the [Brale API](https://docs.brale.xyz/reference). Brale provides a range of services used <a href="https://brale.xyz">create a stablecoin</a>, and this CLI offers a convenient way to access those features directly from the command line.
 
 Under the hood, the CLI uses [oclif](https://oclif.io/) for the UX and generates Brale API definitions using the [openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli) based on our [OpenAPI file](https://api.brale.xyz/openapi).
 
