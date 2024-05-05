@@ -14,7 +14,7 @@
     "@commitlint/cli": "19.2.1",
     "@commitlint/config-conventional": "19.1.0",
     "@oclif/prettier-config": "0.2.1",
-    "@oclif/test": "3.2.8",
+    "@oclif/test": "3.2.12",
     "@openapitools/openapi-generator-cli": "2.13.1",
     "@types/chai": "4.3.14",
     "@types/mocha": "10.0.6",
