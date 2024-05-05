@@ -6,7 +6,7 @@
   "dependencies": {
     "@oclif/core": "3.26.0",
     "@oclif/plugin-help": "6.0.20",
-    "@oclif/plugin-plugins": "5.0.5",
+    "@oclif/plugin-plugins": "5.0.18",
     "@oclif/plugin-update": "4.2.3"
   },
   "description": "Brale API CLI",
