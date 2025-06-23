@@ -5,7 +5,7 @@
 
 The Brale CLI is a command-line interface designed to simplify and streamline stablecoin transfers and API interactions with the [Brale API](https://docs.brale.xyz/reference). Send stablecoins to any wallet with a single command, or use the full suite of commands for complete control.
 
-**✨ New: Unified Transfer Command** - Send stablecoins from your custodial wallet to any external wallet with just 4 arguments!
+**New: Unified Transfer Command** - Send stablecoins from your custodial wallet to any external wallet with just 4 arguments!
 
 Under the hood, the CLI uses [oclif](https://oclif.io/) for the UX and connects directly to the Brale API endpoints at `https://api.brale.xyz`.
 
@@ -65,11 +65,11 @@ brale transfer 100 0x1234...abcd SBC base --dry-run
 
 When you run `brale transfer`, the CLI automatically:
 
-1. 🔐 **Authenticates** using your stored credentials
-2. 🏢 **Finds your account** (or uses the one you specify)
-3. 📍 **Selects a compatible source address** from your custodial wallets
-4. 🔍 **Finds or creates an external address** for the destination wallet
-5. 💸 **Executes the transfer** with proper idempotency protection
+1. **Authenticates** using your stored credentials
+2. **Finds your account** (or uses the one you specify)
+3. **Selects a compatible source address** from your custodial wallets
+4. **Finds or creates an external address** for the destination wallet
+5. **Executes the transfer** with proper idempotency protection
 
 No need to remember account IDs, address IDs, or deal with complex API parameters!
 
@@ -96,10 +96,10 @@ No need to remember account IDs, address IDs, or deal with complex API parameter
 
 When transfers fail due to insufficient balance, Smart Recovery automatically:
 
-🔍 **Analyzes** your available balances across all networks and tokens  
-🛠️ **Generates** recovery options with confidence levels and cost estimates  
-🚀 **Executes** multi-step internal operations to prepare funds  
-✅ **Confirms** before any external transfers
+**Analyzes** your available balances across all networks and tokens  
+**Generates** recovery options with confidence levels and cost estimates  
+**Executes** multi-step internal operations to prepare funds  
+**Confirms** before any external transfers
 
 ## How It Works
 
@@ -123,15 +123,15 @@ brale transfer 100 0x1234...abcd SBC base --no-smart-recovery
 ## Example Recovery Scenario
 
 ```
-❌ Error creating transfer: Insufficient balance
+Error creating transfer: Insufficient balance
 
-🔍 Smart Recovery: Analyzing transfer failure...
-🛠️ Smart Recovery: Found recovery options!
+Smart Recovery: Analyzing transfer failure...
+Smart Recovery: Found recovery options!
 
-⭐ Recommended: Transfer 100.00 SBC from canton to base
+Recommended: Transfer 100.00 SBC from canton to base
    Confidence: high | Time: 2-5 minutes
 
-❓ Would you like to proceed with Smart Recovery? (y/N)
+Would you like to proceed with Smart Recovery? (y/N)
 ```
 
 See [Smart Recovery Demo](SMART_RECOVERY_DEMO.md) for detailed examples and scenarios.
@@ -193,7 +193,7 @@ brale transfers get <account-id> <transfer-id>
 
 ## `brale transfer AMOUNT WALLET VALUETYPE TRANSFERTYPE`
 
-**🚀 Send tokens from your custodial wallet to an external wallet**
+**Send tokens from your custodial wallet to an external wallet**
 
 ```
 USAGE
@@ -318,7 +318,7 @@ DESCRIPTION
 
 ## `brale internal-wallets`
 
-**📋 Show your custodial wallet addresses that can be shared with external parties**
+**Show your custodial wallet addresses that can be shared with external parties**
 
 ```
 USAGE
@@ -532,11 +532,11 @@ brale transfers create $ACCOUNT_ID \
 
 ## Key Features
 
-**🚀 Unified Transfer Command:** Send stablecoins to any wallet with just 4 arguments  
-**🔍 Smart Recovery:** Automatic funding and cross-chain operations  
-**📊 Multi-Network Support:** All major EVM chains plus Solana  
-**💳 Custodial Wallets:** Managed addresses for receiving funds  
-**⚡ Real-time Status:** Track transfers from creation to completion
+**Unified Transfer Command:** Send stablecoins to any wallet with just 4 arguments  
+**Smart Recovery:** Automatic funding and cross-chain operations  
+**Multi-Network Support:** All major EVM chains plus Solana  
+**Custodial Wallets:** Managed addresses for receiving funds  
+**Real-time Status:** Track transfers from creation to completion
 
 ## Getting Help
 
