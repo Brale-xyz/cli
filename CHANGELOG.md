@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2025-06-23
 
-###  **STABLE RELEASE - Production Ready**
+###  ** RELEASE **
 
 This release marks the first stable version of the Brale CLI with full API v2 integration and production-ready functionality.
 
