@@ -7,31 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2025-06-23
 
-### 🎉 **STABLE RELEASE - Production Ready**
+###  **STABLE RELEASE - Production Ready**
 
 This release marks the first stable version of the Brale CLI with full API v2 integration and production-ready functionality.
 
-### ✨ **Major Features**
+###  **Major Features**
 - **Interactive Configuration**: No more confusing required flags - `brale configure` now prompts step-by-step
 - **Organized Address Display**: Internal vs external addresses clearly separated with counts
 - **Mainnet-Only Balances**: Production-focused balance reporting (excludes testnets)
 - **Helpful Error Messages**: Smart guidance when users forget required arguments
 - **Cross-Chain Transfers**: Tested and working SBC swaps between networks (Canton ↔ Base)
 
-### 🔧 **API Integration**
+###  **API Integration**
 - **Fixed Balances Endpoint**: Updated to use correct `/accounts/{id}/addresses/{id}/balance` structure
 - **OAuth2 Authentication**: Secure token-based API access
 - **Current API Compatibility**: Works with latest Brale API endpoints
 - **Proper Error Handling**: Meaningful error messages for API failures
 
-### 🎯 **User Experience**
+###  **User Experience**
 - **Command Structure**: Clean, intuitive commands following Brale vernacular
 - **Global Installation**: Works from anywhere with `brale` command
 - **Account ID Helper**: Automatically shows account ID when missing
 - **Transfer Tracking**: Create, list, and monitor transfer status
 - **Examples & Help**: Comprehensive help system with usage examples
 
-### 🏗️ **Architecture**
+###  **Architecture**
 - **Removed Legacy Commands**: Cleaned up old v1 API commands (mint, redeem, tokens, orders)
 - **Fixed Base Command**: Moved BaseCommand out of commands directory to prevent CLI confusion  
 - **Updated Dependencies**: Latest oclif framework and TypeScript
@@ -46,14 +46,14 @@ This release marks the first stable version of the Brale CLI with full API v2 in
 - `brale transfers list ACCOUNT_ID` - List transfer history
 - `brale transfers get ACCOUNT_ID TRANSFER_ID` - Get transfer details
 
-### 🧪 **Tested Functionality**
-- ✅ Account listing and access
-- ✅ Address organization (7 internal, 54 external addresses)
-- ✅ Mainnet balance reporting ($31,013.69 SBC on Canton)
-- ✅ Cross-chain transfers (tested $1 SBC Canton → Base swap)
-- ✅ Transfer status tracking (pending → processing)
+###  **Tested Functionality**
+-  Account listing and access
+-  Address organization (7 internal, 54 external addresses)
+-  Mainnet balance reporting ($31,013.69 SBC on Canton)
+-  Cross-chain transfers (tested $1 SBC Canton → Base swap)
+-  Transfer status tracking (pending → processing)
 
-### 🔄 **Migration from v0.2.0**
+###  **Migration from v0.2.0**
 - **Breaking**: Removed `mint`, `redeem`, `tokens`, `orders` commands
 - **Breaking**: `balances` now shows mainnet-only custodial wallet balances
 - **Improved**: `configure` is now interactive (no required flags)
